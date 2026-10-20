@@ -1,0 +1,71 @@
+site_name: 实验室计算平台用户手册
+site_description: 实验室 HPC、Slurm、Lmod、Conda、Apptainer 与共享数据集使用指南
+site_author: Laboratory Computing Team
+site_url: https://Willantern.github.io/lab-handbook/
+repo_url: https://github.com/Willantern/lab-handbook
+repo_name: Willantern/lab-handbook
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+  - 快速开始:
+      - 概览: getting-started/index.md
+      - SSH 登录: getting-started/ssh.md
+      - 初始化环境: getting-started/environment.md
+  - 集群使用:
+      - 集群概览: cluster/overview.md
+      - Slurm 作业: cluster/slurm.md
+  - 软件环境:
+      - Lmod Modules: software/modules.md
+      - Conda: software/conda.md
+      - Apptainer: software/apptainer.md
+  - 数据管理:
+      - 共享数据集: data/shared-data.md
+  - 实验流程:
+      - PyTorch GPU 作业: workflows/pytorch-gpu.md
+  - 故障排查: troubleshooting/index.md
+  - 参与维护: contributing.md
