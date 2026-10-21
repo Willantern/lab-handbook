@@ -1,11 +1,12 @@
 site_name: 实验室计算平台用户手册
-site_description: 实验室 HPC、Slurm、Lmod、Conda、Apptainer 与共享数据集使用指南
-site_author: Laboratory Computing Team
+site_description: 实验室计算平台使用指南
+site_author: Liancheng Wu
 site_url: https://Willantern.github.io/lab-handbook/
 repo_url: https://github.com/Willantern/lab-handbook
 repo_name: Willantern/lab-handbook
 edit_uri: edit/main/docs/
-
+extra_css:
+  - stylesheets/monochrome.css
 theme:
   name: material
   language: zh
@@ -18,6 +19,7 @@ theme:
     - search.highlight
     - content.code.copy
     - content.action.edit
+    
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -33,6 +35,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
+  
 
 plugins:
   - search
@@ -58,14 +61,16 @@ nav:
       - 初始化环境: getting-started/environment.md
   - 集群使用:
       - 集群概览: cluster/overview.md
-      - Slurm 作业: cluster/slurm.md
+      - Slurm: cluster/slurm.md
+      - 提交作业: cluster/submit.md
   - 软件环境:
+      - Linux : software/linux.md
       - Lmod Modules: software/modules.md
       - Conda: software/conda.md
       - Apptainer: software/apptainer.md
   - 数据管理:
       - 共享数据集: data/shared-data.md
-  - 实验流程:
-      - PyTorch GPU 作业: workflows/pytorch-gpu.md
+  # - 实验流程:
+  #     - PyTorch GPU 作业: workflows/pytorch-gpu.md
   - 故障排查: troubleshooting/index.md
-  - 参与维护: contributing.md
+  - 手册维护: contributing.md

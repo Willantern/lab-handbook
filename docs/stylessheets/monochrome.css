@@ -1,0 +1,52 @@
+
+/* Light mode: soft white and gray */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #333333;
+
+  --md-primary-fg-color: #f2f2f2;
+  --md-primary-fg-color--light: #f7f7f7;
+  --md-primary-fg-color--dark: #e5e5e5;
+  --md-primary-bg-color: #333333;
+
+  --md-accent-fg-color: #666666;
+  --md-accent-bg-color: #ffffff;
+
+  --md-typeset-a-color: #4a4a4a;
+  --md-code-bg-color: #f5f5f5;
+  --md-footer-bg-color: #eeeeee;
+  --md-footer-fg-color: #333333;
+}
+
+/* Dark mode: charcoal instead of pure black */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #242424;
+  --md-default-fg-color: #e2e2e2;
+
+  --md-primary-fg-color: #303030;
+  --md-primary-fg-color--light: #3a3a3a;
+  --md-primary-fg-color--dark: #252525;
+  --md-primary-bg-color: #eeeeee;
+
+  --md-accent-fg-color: #c8c8c8;
+  --md-accent-bg-color: #303030;
+
+  --md-typeset-a-color: #d0d0d0;
+  --md-code-bg-color: #303030;
+  --md-footer-bg-color: #202020;
+  --md-footer-fg-color: #dddddd;
+}
+
+/* Softer borders and code blocks */
+.md-typeset pre,
+.md-typeset table:not([class]) {
+  border-color: #dddddd;
+}
+
+.md-typeset pre > code {
+  border-radius: 6px;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
