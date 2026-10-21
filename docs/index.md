@@ -20,7 +20,7 @@
 
     通过 Slurm 申请 CPU 和 GPU 资源。
 
-    [Slurm 作业](cluster/submit.md)
+    [Slurm 作业](cluster/slurm-submit.md)
 
 -   : **软件环境**
 

@@ -61,8 +61,13 @@ nav:
       - 初始化环境: getting-started/environment.md
   - 集群使用:
       - 集群概览: cluster/overview.md
+      - 用户信息: cluster/server-userinfo.md
       - Slurm: cluster/slurm.md
-      - 提交作业: cluster/submit.md
+      - 提交作业: cluster/slurm-submit.md
+      - 用户管理: cluster/slurm-users.md
+      - 分区配置: cluster/slurm-partitions.md
+      - QOS: cluster/slurm-qos.md
+      - 磁盘配额: cluster/disk-quota.md
   - 软件环境:
       - Linux : software/linux.md
       - Lmod Modules: software/modules.md
