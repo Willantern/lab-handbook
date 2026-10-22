@@ -24,49 +24,53 @@ QOS 是 Slurm 中用于定义作业服务等级和资源限制的机制。
 
 ## 2. 常规 QOS 配置
 
-当前常规 QOS 如下。
+常规 QOS 用于学生日常实验。调整后，本科生采用原硕士生的资源配置，硕士生采用原博士生的资源配置，博士生暂时保持原有配置。
 
 | 参数 | `undergrad_qos` | `master_qos` | `phd_qos` |
 |---|---:|---:|---:|
-| Priority | 10 | 50 | 100 |
-| MaxWall | 12 小时 | 2 天 | 3 天 |
-| MaxJobsPerUser | 2 | 3 | 4 |
-| MaxSubmitJobsPerUser | 10 | 20 | 30 |
-| MaxTRESPerJob：CPU | 16 | 32 | 64 |
-| MaxTRESPerJob：内存 | 32 GiB | 64 GiB | 128 GiB |
-| MaxTRESPerJob：GPU | 1 | 1 | 2 |
-| MaxTRESPerUser：CPU | 24 | 48 | 96 |
-| MaxTRESPerUser：内存 | 48 GiB | 96 GiB | 160 GiB |
-| MaxTRESPerUser：GPU | 1 | 1 | 2 |
-| GrpTRES：CPU | 64 | 128 | 192 |
-| GrpTRES：内存 | 96 GiB | 160 GiB | 224 GiB |
-| GrpTRES：GPU | 2 | 3 | 4 |
+| Priority | 50 | 100 | 100 |
+| MaxWall | 2 天 | 3 天 | 3 天 |
+| MaxJobsPerUser | 3 | 4 | 4 |
+| MaxSubmitJobsPerUser | 20 | 30 | 30 |
+| MaxTRESPerJob：CPU | 32 | 64 | 64 |
+| MaxTRESPerJob：内存 | 64 GiB | 128 GiB | 128 GiB |
+| MaxTRESPerJob：GPU | 1 | 2 | 2 |
+| MaxTRESPerUser：CPU | 48 | 96 | 96 |
+| MaxTRESPerUser：内存 | 96 GiB | 160 GiB | 160 GiB |
+| MaxTRESPerUser：GPU | 1 | 2 | 2 |
+| GrpTRES：CPU | 128 | 192 | 192 |
+| GrpTRES：内存 | 160 GiB | 224 GiB | 224 GiB |
+| GrpTRES：GPU | 3 | 4 | 4 |
 
 三个常规 QOS 均启用了 `DenyOnLimit`。
 
+硕士生与博士生目前具有相同的常规 QOS 硬限制和 QOS 优先级。两者的账户 Fairshare 仍分别为 2 和 4。
+
 ## 3. 弹性 QOS 配置
 
-弹性 QOS 允许用户在需要更多计算资源时申请更大的作业资源上限。
+弹性 QOS 允许用户主动申请更大的资源上限。用户需要在提交作业时显式指定对应的弹性 QOS。
 
 | 参数 | `undergrad_burst` | `master_burst` | `phd_burst` |
 |---|---:|---:|---:|
-| Priority | 10 | 50 | 100 |
-| MaxWall | 12 小时 | 2 天 | 3 天 |
-| MaxJobsPerUser | 2 | 3 | 4 |
-| MaxSubmitJobsPerUser | 10 | 20 | 30 |
-| MaxTRESPerJob：CPU | 32 | 64 | 256 |
-| MaxTRESPerJob：内存 | 64 GiB | 128 GiB | 240 GiB |
-| MaxTRESPerJob：GPU | 1 | 2 | 4 |
-| MaxTRESPerUser：CPU | 48 | 96 | 256 |
-| MaxTRESPerUser：内存 | 96 GiB | 160 GiB | 240 GiB |
-| MaxTRESPerUser：GPU | 1 | 2 | 4 |
-| GrpTRES：CPU | 96 | 160 | 256 |
-| GrpTRES：内存 | 128 GiB | 192 GiB | 240 GiB |
-| GrpTRES：GPU | 2 | 3 | 4 |
+| Priority | 50 | 100 | 100 |
+| MaxWall | 2 天 | 3 天 | 3 天 |
+| MaxJobsPerUser | 3 | 4 | 4 |
+| MaxSubmitJobsPerUser | 20 | 30 | 30 |
+| MaxTRESPerJob：CPU | 64 | 256 | 256 |
+| MaxTRESPerJob：内存 | 128 GiB | 240 GiB | 240 GiB |
+| MaxTRESPerJob：GPU | 2 | 4 | 4 |
+| MaxTRESPerUser：CPU | 96 | 256 | 256 |
+| MaxTRESPerUser：内存 | 160 GiB | 240 GiB | 240 GiB |
+| MaxTRESPerUser：GPU | 2 | 4 | 4 |
+| GrpTRES：CPU | 160 | 256 | 256 |
+| GrpTRES：内存 | 192 GiB | 240 GiB | 240 GiB |
+| GrpTRES：GPU | 3 | 4 | 4 |
 
 三个弹性 QOS 均启用了 `DenyOnLimit`。
 
-博士生弹性 QOS 的上限接近整台服务器的可用资源，因此单个博士生作业可以申请大量 CPU、内存和 GPU。但这不代表系统为其预留了这些资源。
+博士生弹性 QOS 的资源上限接近整台服务器的可用资源，因此单个博士生作业可以申请较多 CPU、内存和 GPU。但这不代表系统为其预留了这些资源。
+
+目前硕士生与博士生的弹性 QOS 硬限制及 QOS 优先级相同。若希望博士生始终具有更高的 QOS 优先级或更大的资源上限，需要另行调整博士生配置。
 
 ## 4. QOS 参数说明
 
@@ -74,16 +78,28 @@ QOS 是 Slurm 中用于定义作业服务等级和资源限制的机制。
 
 `Priority` 用于参与作业优先级计算。数值越高，通常越有利于作业在队列竞争中获得较高优先级。
 
-当前配置为：
+当前 QOS 优先级如下：
 
 | QOS | Priority |
 |---|---:|
 | `normal` | 0 |
-| 本科生 | 10 |
-| 硕士生 | 50 |
+| 本科生 | 50 |
+| 硕士生 | 100 |
 | 博士生 | 100 |
 
-当前 Slurm 使用多因子调度，因此实际作业优先级还受到等待时间和 Fairshare 等因素影响。
+当前 Slurm 使用多因子调度，因此实际作业优先级还受到等待时间、Fairshare 等因素影响。
+
+账户 Fairshare 配置如下：
+
+| 账户 | Fairshare |
+|---|---:|
+| `undergrad` | 1 |
+| `master` | 2 |
+| `phd` | 4 |
+
+Fairshare 体现不同账户在公平共享调度中的相对权重，不等于固定资源配额。
+
+**注意：** 当前硕士生与博士生的 QOS 优先级相同，但博士生账户的 Fairshare 更高。系统不会仅因为博士生提交了作业，就自动终止其他用户正在运行的作业。
 
 ### 4.2 MaxWallDurationPerJob
 

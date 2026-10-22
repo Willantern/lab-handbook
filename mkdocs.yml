@@ -68,6 +68,7 @@ nav:
       - 分区配置: cluster/slurm-partitions.md
       - QOS: cluster/slurm-qos.md
       - 磁盘配额: cluster/disk-quota.md
+      - 端口占用: cluster/port-use.md
   - 软件环境:
       - Linux : software/linux.md
       - Lmod Modules: software/modules.md
@@ -75,7 +76,10 @@ nav:
       - Apptainer: software/apptainer.md
   - 数据管理:
       - 共享数据集: data/shared-data.md
+      - 软件包缓存(Python): data/devpi-pytorch-cache.md
+      - 共享Pytorch: data/shared-pytorch.md
   # - 实验流程:
   #     - PyTorch GPU 作业: workflows/pytorch-gpu.md
   - 故障排查: troubleshooting/index.md
+  - 实时监控: troubleshooting/monitoring-and-process-audit.md
   - 手册维护: contributing.md
