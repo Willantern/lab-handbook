@@ -6,6 +6,9 @@
 | `wlc` | 1001 | 博士生 | 普通用户 | `phd` | `phd_qos` | `吴联程` | 
 | `hzx` | 1002 | 博士生 | 普通用户 | `phd` | `phd_qos` | `黄至行` | 
 | `zyh` | 1003 | 博士生 | 普通用户 | `phd` | `phd_qos` | `张云辉` | 
+| `ljh` | 1004 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `刘锦豪` | 
+| `lzy` | 1005 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `刘泽宇` | 
+| `cjl` | 1006 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `陈建霖` | 
 
 ## 用户资源权限
 
