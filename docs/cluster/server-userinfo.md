@@ -9,6 +9,7 @@
 | `ljh` | 1004 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `刘锦豪` | 
 | `lzy` | 1005 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `刘泽宇` | 
 | `cjl` | 1006 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `陈建霖` | 
+| `ydr` | 1008 | 硕士生 | 普通用户 | `master` | `master_qos` | `叶帝锐` | 
 
 ## 用户资源权限
 

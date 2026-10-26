@@ -30,7 +30,7 @@ QOS 是 Slurm 中用于定义作业服务等级和资源限制的机制。
 |---|---:|---:|---:|
 | Priority | 50 | 100 | 100 |
 | MaxWall | 2 天 | 3 天 | 3 天 |
-| MaxJobsPerUser | 3 | 4 | 4 |
+| MaxJobsPerUser | 10 | 10 | 10 |
 | MaxSubmitJobsPerUser | 20 | 30 | 30 |
 | MaxTRESPerJob：CPU | 32 | 64 | 64 |
 | MaxTRESPerJob：内存 | 64 GiB | 128 GiB | 128 GiB |
@@ -54,7 +54,7 @@ QOS 是 Slurm 中用于定义作业服务等级和资源限制的机制。
 |---|---:|---:|---:|
 | Priority | 50 | 100 | 100 |
 | MaxWall | 2 天 | 3 天 | 3 天 |
-| MaxJobsPerUser | 3 | 4 | 4 |
+| MaxJobsPerUser | 15 | 15 | 15 |
 | MaxSubmitJobsPerUser | 20 | 30 | 30 |
 | MaxTRESPerJob：CPU | 64 | 256 | 256 |
 | MaxTRESPerJob：内存 | 128 GiB | 240 GiB | 240 GiB |
