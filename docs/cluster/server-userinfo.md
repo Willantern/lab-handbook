@@ -10,6 +10,7 @@
 | `lzy` | 1005 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `刘泽宇` | 
 | `cjl` | 1006 | 本科生 | 普通用户 | `undergrad` | `undergrad_qos` | `陈建霖` | 
 | `ydr` | 1008 | 硕士生 | 普通用户 | `master` | `master_qos` | `叶帝锐` | 
+| `wyw` | 1009 | 硕士生 | 普通用户 | `master` | `master_qos` | `伍彦雯` | 
 
 ## 用户资源权限
 

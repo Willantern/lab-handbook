@@ -78,6 +78,7 @@ nav:
       - 共享数据集: data/shared-data.md
       - 软件包缓存(Python): data/devpi-pytorch-cache.md
       - 共享Pytorch: data/shared-pytorch.md
+      - 使用大语言模型: data/shared-llm.md
   # - 实验流程:
   #     - PyTorch GPU 作业: workflows/pytorch-gpu.md
   - 故障排查: troubleshooting/index.md
